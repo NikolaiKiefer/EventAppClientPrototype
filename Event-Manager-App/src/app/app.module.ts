@@ -9,6 +9,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MediaGalleryComponent } from './media-gallery/media-gallery.component';
 import { MatCardModule } from '@angular/material/card';
 import { HeaderComponent } from './header/header.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { HeaderComponent } from './header/header.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    FlexLayoutModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
