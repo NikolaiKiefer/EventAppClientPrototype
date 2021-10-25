@@ -12,13 +12,15 @@ import { HeaderComponent } from './header/header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     MediaGalleryComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
