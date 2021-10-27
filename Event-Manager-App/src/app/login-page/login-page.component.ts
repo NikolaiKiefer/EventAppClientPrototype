@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-login-page',
@@ -9,6 +10,7 @@ import {FormControl, Validators} from '@angular/forms';
 export class LoginPageComponent implements OnInit {
 
   email = new FormControl('', [Validators.required, Validators.email]);
+  password = new FormControl('',[Validators.required]);
   hide = true;
 
   getErrorMessage() {
@@ -19,9 +21,13 @@ export class LoginPageComponent implements OnInit {
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 
-  constructor() { }
+  constructor(private authservice: AuthenticationService) { }
 
   ngOnInit(): void {
+  }
+
+  login(){
+    this.authservice.tryAuth(this.email.value, this.password.value);
   }
 
 }
