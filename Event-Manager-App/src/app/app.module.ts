@@ -16,6 +16,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import {MatInputModule} from '@angular/material/input';
     LandingPageComponent,
     MediaGalleryComponent,
     HeaderComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    ProfilePageComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import {MatInputModule} from '@angular/material/input';
     MatIconModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

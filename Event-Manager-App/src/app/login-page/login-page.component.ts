@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
 
 @Component({
@@ -21,13 +22,14 @@ export class LoginPageComponent implements OnInit {
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 
-  constructor(private authservice: AuthenticationService) { }
+  constructor(private authservice: AuthenticationService, private route: Router) { }
 
   ngOnInit(): void {
   }
 
   login(){
     this.authservice.tryAuth(this.email.value, this.password.value);
+    this.route.navigate(['/profile']);
   }
 
 }

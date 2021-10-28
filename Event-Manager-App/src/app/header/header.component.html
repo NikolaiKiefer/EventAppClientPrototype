@@ -1,8 +1,21 @@
-<div fxLayout='row' id='header-wrapper'>
+<!--div fxLayout='row' id='header-wrapper'>
     <img src='assets\SVG_Logo.svg.png' class='logo' routerLink='/' >
     <div id='logoText' fxLayout="column">
         <h1 >Family Event App</h1>
     </div>
     <div id='filler'></div>
     <mat-icon id='accountCircle'>account_circle</mat-icon>     
-</div>
+</div-->
+<mat-toolbar class="toolbar">
+
+    <mat-toolbar-row>
+        <img src='assets\SVG_Logo.svg.png' class='logo' routerLink='/' >
+        <span class='app-name'>Family Event</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+      </mat-toolbar-row>
+  
+
+  </mat-toolbar>

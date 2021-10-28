@@ -1,25 +1,16 @@
-#header-wrapper {
-  background-color: rgb(168, 50, 50);
-};
+.toolbar {
+    background-color: rgb(168, 50, 50);
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
 
 .logo {
-    width: 50px;
+    max-height: 80%;
     margin: 10px;
+    cursor: pointer;
 }
-h1 {
+.app-name {
     font-family: Lobster;
-    margin: 10px;
-}
-
-#logoText {
-    justify-content: center;
-}
-#filler {
-    flex-grow: 1;
-}
-
-#accountCircle {
-    align-self: center;
-    font-size: xx-large;
-    margin-right: 10px;
 }

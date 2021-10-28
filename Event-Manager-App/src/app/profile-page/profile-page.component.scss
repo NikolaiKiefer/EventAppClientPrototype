@@ -1,0 +1,32 @@
+.profilePic{
+    border-radius: 50%;
+
+}
+
+.addEvent{
+    background-image: url("/assets/background/pexels-asad-photo-maldives-169198.jpg");
+    background-size: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.showEvents {
+    background-image: url("/assets/background/pexels-nicole-michalou-5779170.jpg");
+    background-size: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.conatiner{
+    align-self: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+
+.eventText
+{
+    align-self: center;
+}
