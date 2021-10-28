@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { EventPageComponent } from './event-page/event-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MediaGalleryComponent,
     HeaderComponent,
     LoginPageComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    EventPageComponent
   ],
   imports: [
     BrowserModule,
