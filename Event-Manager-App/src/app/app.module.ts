@@ -19,6 +19,8 @@ import {MatInputModule} from '@angular/material/input';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { EventPageComponent } from './event-page/event-page.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,13 @@ import { EventPageComponent } from './event-page/event-page.component';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatToolbarModule
+    MatToolbarModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
