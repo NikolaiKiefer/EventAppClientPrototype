@@ -1,0 +1,16 @@
+.container {
+    flex-direction: column;
+    align-content: space-between;
+ }
+ 
+ .outer-div{
+     margin-top: 50px;
+     align-self: center;
+     flex-direction: row;
+     display: flex;
+     justify-content: center;
+ }
+ 
+ .logo{
+     align-self: center;
+ }

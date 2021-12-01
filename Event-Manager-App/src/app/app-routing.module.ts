@@ -5,13 +5,15 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { MediaGalleryComponent } from './media-gallery/media-gallery.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { RegisterPageComponent } from './register-page/register-page.component';
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
   {path: 'gallery', component: MediaGalleryComponent},
   {path: 'login', component: LoginPageComponent},
   {path: 'profile', component: ProfilePageComponent},
-  {path: 'event', component: EventPageComponent}
+  {path: 'event', component: EventPageComponent},
+  {path: 'register', component: RegisterPageComponent},
 ];
 
 @NgModule({

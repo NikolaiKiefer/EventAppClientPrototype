@@ -22,6 +22,11 @@ import { EventPageComponent } from './event-page/event-page.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
+// for the auth services
+import { authInterceptorProviders } from './helpers/auth.interceptor';
+import { RegisterPageComponent } from './register-page/register-page.component';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +35,8 @@ import { environment } from '../environments/environment';
     HeaderComponent,
     LoginPageComponent,
     ProfilePageComponent,
-    EventPageComponent
+    EventPageComponent,
+    RegisterPageComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +51,7 @@ import { environment } from '../environments/environment';
     ReactiveFormsModule,
     MatInputModule,
     MatToolbarModule,
+    HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
@@ -52,7 +59,7 @@ import { environment } from '../environments/environment';
       registrationStrategy: 'registerWhenStable:30000'
     })
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
