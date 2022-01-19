@@ -21,11 +21,19 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { EventPageComponent } from './event-page/event-page.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { MatListModule } from '@angular/material/list';
+import { MatExpansionModule } from '@angular/material/expansion';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+
 
 // for the auth services
 import { authInterceptorProviders } from './helpers/auth.interceptor';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { HttpClientModule } from '@angular/common/http';
+
+import { GoogleMapsModule } from '@angular/google-maps'
+
 
 @NgModule({
   declarations: [
@@ -50,14 +58,19 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatListModule,
     MatToolbarModule,
+    MatExpansionModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
+    GoogleMapsModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

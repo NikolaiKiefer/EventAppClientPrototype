@@ -1,1 +1,42 @@
-<p>event-page works!</p>
+<div fxLayout="row" fxLayout.xs='column' fxLayout.sm='column'>
+<div fxLayoutAlign="start start" fxFlex='40'>
+    
+
+    <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Ort
+            </mat-panel-title>
+            <mat-panel-description>
+              Albstadt-Ebingen
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <google-map
+          [center]="center">
+          <map-marker
+          [position]="marker.position"
+          [label]="marker.label"
+          [title]="marker.title"
+          
+        >
+        </map-marker>
+        </google-map>
+        </mat-expansion-panel>
+        <mat-expansion-panel >
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Zeit
+            </mat-panel-title>
+            <mat-panel-description>
+              
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-card class="demo-inline-calendar-card">
+            <mat-calendar ></mat-calendar>
+          </mat-card>
+        </mat-expansion-panel>
+      </mat-accordion>
+</div>
+<img src="assets\background\csm_IMG_9045_-_bearbeitet2_1920x820_5d3e2d4206.jpg"  fxFlex=50 >
+</div>
