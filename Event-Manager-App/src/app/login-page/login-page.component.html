@@ -4,9 +4,9 @@
         <img mat-card-image class='logo' src="./assets/logos/account-circle.svg" alt="accountCircle" style="max-width: 300px;">
         <!--mat-icon mat-card-image aria-hidden="false" aria-label="Example home icon">home</mat-icon-->
         <mat-form-field  appearance="fill">
-            <mat-label>Enter your email</mat-label>
-            <input matInput placeholder="pat@example.com" [formControl]="email" required>
-            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            <mat-label>Enter your username</mat-label>
+            <input matInput placeholder="max" [formControl]="username" required>
+            <mat-error *ngIf="username.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
@@ -17,7 +17,7 @@
             </button>
           </mat-form-field>
 
-          <button mat-raised-button (click)='login()' [disabled]="!(password.valid && email.valid)">Login</button>
+          <button mat-raised-button (click)='login()' [disabled]="!(password.valid && username.valid)">Login</button>
     </mat-card>
 
     

@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'gallery', component: MediaGalleryComponent},
   {path: 'login', component: LoginPageComponent},
   {path: 'profile', component: ProfilePageComponent},
-  {path: 'event', component: EventPageComponent},
+  {path: 'event/:id', component: EventPageComponent},
   {path: 'register', component: RegisterPageComponent},
 ];
 

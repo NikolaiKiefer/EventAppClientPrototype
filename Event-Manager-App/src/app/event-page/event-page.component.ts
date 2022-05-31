@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { EventService } from '../services/event.service';
+import { Subscription } from 'rxjs';
+import { Event } from '../model/event.model';
 
 @Component({
   selector: 'app-event-page',
@@ -6,6 +10,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-page.component.scss']
 })
 export class EventPageComponent implements OnInit {
+
+  subscription: Subscription = new Subscription;
+  event!: Event;
 
   //lat = 48.2103270750066;
   //lng = 9.023426;
@@ -23,9 +30,19 @@ export class EventPageComponent implements OnInit {
     title: 'Marker title ',
   }
 
-  constructor() { }
+  constructor(private route: ActivatedRoute,
+    private eventService: EventService) { }
 
   ngOnInit(): void {
+
+    this.subscription = this.route.params.subscribe(params => {
+      const id = params['id'] || '';
+      this.eventService.getEvent(id).subscribe(event => {
+        console.log(event);
+      })
+    })
+
+    
 
     navigator.geolocation.getCurrentPosition((position) => {
       this.center = {
@@ -33,6 +50,10 @@ export class EventPageComponent implements OnInit {
         lng: position.coords.longitude,
       }
     })
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
 }
